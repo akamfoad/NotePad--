@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controls.PadController">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="File" mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="New" mnemonicParsing="false" onAction="#onNew" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              <MenuItem fx:id="open" mnemonicParsing="false" onAction="#onOpen" text="Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#onClose" text="Close">
+                      <accelerator>
+                          <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator></MenuItem>
+                  <MenuItem fx:id="closeAll" mnemonicParsing="false" onAction="#onCloseAll" text="Close All">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#onSave" text="Save">
+                      <accelerator>
+                          <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator></MenuItem>
+                  <MenuItem fx:id="saveAs" mnemonicParsing="false" onAction="#onSaveAs" text="Save As">
+                      <accelerator>
+                          <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                      </accelerator></MenuItem>
+                  <SeparatorMenuItem fx:id="separator" mnemonicParsing="false" />
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#onExit" text="Exit">
+                      <accelerator>
+                          <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit" />
+          <Menu fx:id="Help" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="About" mnemonicParsing="false" onAction="#onAbout" text="About" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabContentPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
