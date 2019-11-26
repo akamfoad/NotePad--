@@ -1,4 +1,4 @@
-#NotePad--
+# NotePad--
 
 a little BadPad which I used during WebDev basic learning 
 this helped me to not use IDE features like autocomplete
