@@ -1,5 +1,6 @@
 package Controls;
 
+import Models.Result;
 import Models.TextFile;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -10,7 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
-import Models.Result;
+
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -33,21 +34,9 @@ public class TabImpl extends Tab implements Initializable {
     @FXML
     private TextArea FileContent;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        getFileContent().textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if(getFileResult()==null) {
-                    setFileResult(new Result<>(true, new TextFile(null, null), false));
-                }
-                getFileResult().setSaved(false);
-            }
-        });
-    }
-
    public TabImpl(String title, Result<TextFile> fileResult){
        super(title);
+
        this.tabModel = new TabModel();
        this.FileResult = fileResult;
        this.FileContent = new TextArea();
@@ -67,6 +56,23 @@ public class TabImpl extends Tab implements Initializable {
            e.printStackTrace();
        }
    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        getFileContent().textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if (getFileResult() == null) {
+                    setFileResult(new Result<>(true, new TextFile(null, null), false));
+                }
+                getFileResult().setSaved(false);
+            }
+        });
+
+        FileContent.prefWidthProperty().bind(ElementContainer.prefWidthProperty());
+        FileContent.prefHeightProperty().bind(ElementContainer.prefHeightProperty());
+
+    }
 
    private TabImpl(TabModel tabModel){
        this.tabModel = tabModel;
