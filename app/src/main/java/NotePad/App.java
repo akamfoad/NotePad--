@@ -1,5 +1,7 @@
-import Controls.PadController;
-import Models.PadModel;
+package NotePad;
+
+import NotePad.Controls.PadController;
+import NotePad.Models.PadModel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,13 +24,13 @@ public class App extends Application {
     }
 
     public void start(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Scenes/UI.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/UI.fxml"));
         loader.setControllerFactory(t -> new PadController(new PadModel()));
         scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("NotePad--");
         stage.show();
-        stage.getIcons().add(new Image("/Res/notepad-icon-17533.png"));
+        stage.getIcons().add(new Image("/assets/notepad-icon-17533.png"));
     }
 
 }

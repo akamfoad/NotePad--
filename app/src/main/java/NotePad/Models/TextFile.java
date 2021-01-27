@@ -1,4 +1,4 @@
-package Models;
+package NotePad.Models;
 
 import java.nio.file.Path;
 import java.util.List;

@@ -1,7 +1,7 @@
-package Controls;
+package NotePad.Controls;
 
-import Models.Result;
-import Models.TextFile;
+import NotePad.Models.Result;
+import NotePad.Models.TextFile;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -11,6 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,7 +27,7 @@ public class TabImpl extends Tab implements Initializable {
     private TabModel tabModel;
 
     @FXML
-    private HBox ElementContainer;
+    private Pane ElementContainer;
 
     @FXML
     private ListView<Integer> Numbers;
@@ -94,11 +95,11 @@ public class TabImpl extends Tab implements Initializable {
         this.tabModel = tabModel;
     }
 
-    public HBox getElementContainer() {
+    public Pane getElementContainer() {
         return ElementContainer;
     }
 
-    public void setElementContainer(HBox elementContainer) {
+    public void setElementContainer(Pane elementContainer) {
         ElementContainer = elementContainer;
     }
 

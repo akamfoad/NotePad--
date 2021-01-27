@@ -6,7 +6,7 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
             minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0"
             stylesheets="@../Styles/UI.css" xmlns="http://javafx.com/javafx/10.0.1"
-            fx:controller="Controls.PadController">
+            fx:controller="NotePad.Controls.PadController">
    <top>
       <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
         <menus>

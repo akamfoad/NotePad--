@@ -1,7 +1,7 @@
-package Models;
+package NotePad.Models;
 
 
-import Controls.TabImpl;
+import NotePad.Controls.TabImpl;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TabPane;

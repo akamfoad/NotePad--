@@ -1,4 +1,4 @@
-package Models;
+package NotePad.Models;
 
 public class Result<T extends TextFile> {
     private boolean hasData;

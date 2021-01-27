@@ -1,6 +1,6 @@
-package Controls;
+package NotePad.Controls;
 
-import Models.PadModel;
+import NotePad.Models.PadModel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
